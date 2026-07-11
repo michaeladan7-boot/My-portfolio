@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Palette — Mick Adan | Designer & Developer</title>
+    <meta name="description"
+        content="Mick Adan (Palette) — Designer & Developer crafting clean, functional digital experiences.">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,12 +21,21 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="#" class="logo">Palette</a>
-            <ul class="nav-menu">
+
+            <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html">Work</a></li>
                 <li><a href="service.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+
             <a href="#contact" class="nav-cta">Hire Me</a>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false"
+                aria-controls="nav-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
         </div>
     </nav>
 
@@ -51,7 +62,7 @@
             <div class="portfolio-grid">
                 <article class="portfolio-item featured">
                     <div class="project-image">
-                        <img src="images/nexera.png" alt="Nexera AI startup landing page">
+                        <img src="images/nexera.png" alt="Nexera AI startup landing page" loading="lazy">
                         <div class="project-overlay">
                             <a href="#" class="view-project">View Project</a>
                         </div>
@@ -69,7 +80,7 @@
 
                 <article class="portfolio-item">
                     <div class="project-image">
-                        <img src="images/estatly.png" alt="Estatly real estate platform">
+                        <img src="images/estatly.png" alt="Estatly real estate platform" loading="lazy">
                         <div class="project-overlay">
                             <a href="#" class="view-project">View Project</a>
                         </div>
@@ -86,7 +97,7 @@
 
                 <article class="portfolio-item">
                     <div class="project-image">
-                        <img src="images/iron.png" alt="Iron Fitness brand">
+                        <img src="images/iron.png" alt="Iron Fitness brand" loading="lazy">
                         <div class="project-overlay">
                             <a href="#" class="view-project">View Project</a>
                         </div>
@@ -103,7 +114,7 @@
 
                 <article class="portfolio-item">
                     <div class="project-image">
-                        <img src="images/fix up imgae.png" alt="Graphic design showcase">
+                        <img src="images/fix up imgae.png" alt="Graphic design showcase" loading="lazy">
                         <div class="project-overlay">
                             <a href="#" class="view-project">View Project</a>
                         </div>
@@ -120,7 +131,7 @@
 
                 <article class="portfolio-item">
                     <div class="project-image">
-                        <img src="images/pallete logo - Copy.png" alt="Logo design showcase">
+                        <img src="images/pallete logo - Copy.png" alt="Logo design showcase" loading="lazy">
                         <div class="project-overlay">
                             <a href="#" class="view-project">View Project</a>
                         </div>
@@ -143,7 +154,7 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-image">
-                    <img src="images/𝑹&𝑮🇺🇸 on TikTok.jpg" alt="Mick Adan - Designer and Developer">
+                    <img src="images/𝑹&𝑮🇺🇸 on TikTok.jpg" alt="Mick Adan - Designer and Developer" loading="lazy">
                 </div>
                 <div class="about-content">
                     <h2>About Me</h2>
@@ -233,14 +244,17 @@
                 <div class="footer-section">
                     <h5>Connect</h5>
                     <ul>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">LinkedIn</a></li>
-                        <li><a href="#">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/michael-adangabe-973582401/" target="_blank"
+                                rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a href="https://github.com/michaeladan7-boot" target="_blank"
+                                rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="https://www.instagram.com/michael_adangabe7/" target="_blank"
+                                rel="noopener noreferrer">Instagram</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2024 Palette — Mick Adan. All rights reserved.</p>
+                <p>&copy; <span id="year"></span> Palette — Mick Adan. All rights reserved.</p>
             </div>
         </div>
     </footer>

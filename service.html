@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services — Palette</title>
-    <link rel="stylesheet" href="Service.css">
+    <meta name="description"
+        content="Web development, graphic design, and logo design services from Mick Adan (Palette).">
+    <link rel="stylesheet" href="service.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -19,12 +21,21 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">Palette</a>
-            <ul class="nav-menu">
+
+            <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html">Work</a></li>
-                <li><a href="Service.html">Services</a></li>
+                <li><a href="service.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+
             <a href="contact.html" class="nav-cta">Hire Me</a>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false"
+                aria-controls="nav-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
         </div>
     </nav>
 
@@ -59,7 +70,10 @@
 
             <div class="pricing-card">
                 <div class="pricing-label">Web Design</div>
-                <div class="pricing-amount">$30 and higher<span>/project</span></div>
+                <div class="pricing-amount">
+                    <span class="pricing-from">Starting at</span>
+                    $10<span class="pricing-unit">/project</span>
+                </div>
                 <ul class="pricing-list">
                     <li>Landing pages</li>
                     <li>Responsive design</li>
@@ -71,9 +85,11 @@
             </div>
 
             <div class="pricing-card featured">
-                <!-- <div class="pricing-badge">Most Popular</div> -->
                 <div class="pricing-label">Graphic Design</div>
-                <div class="pricing-amount">$10 and higher<span>/project</span></div>
+                <div class="pricing-amount">
+                    <span class="pricing-from">Starting at</span>
+                    $5<span class="pricing-unit">/project</span>
+                </div>
                 <ul class="pricing-list">
                     <li>Poster or banner design</li>
                     <li>Social media designs</li>
@@ -85,9 +101,12 @@
 
             <div class="pricing-card">
                 <div class="pricing-label">Logo Design</div>
-                <div class="pricing-amount">$20 and higher<span>/project</span></div>
+                <div class="pricing-amount">
+                    <span class="pricing-from">Starting at</span>
+                    $15<span class="pricing-unit">/project</span>
+                </div>
                 <ul class="pricing-list">
-                    <li>logo Design</li>
+                    <li>Logo design</li>
                     <li>PNG, SVG, PDF files</li>
                     <li>Brand color palette</li>
                     <li>2 revision rounds</li>
@@ -96,6 +115,11 @@
                 <a href="contact.html" class="pricing-btn">Get Started</a>
             </div>
 
+        </div>
+
+        <div class="pricing-note">
+            <span class="pricing-note-icon">💬</span>
+            <p>All prices are <strong>negotiable</strong> — let's talk and find something that fits your budget.</p>
         </div>
     </div>
 
@@ -111,25 +135,29 @@
                     <h5>Quick Links</h5>
                     <ul>
                         <li><a href="index.html">Work</a></li>
-                        <li><a href="Service.html">Services</a></li>
+                        <li><a href="service.html">Services</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h5>Connect</h5>
                     <ul>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">LinkedIn</a></li>
-                        <li><a href="#">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/michael-adangabe-973582401/" target="_blank"
+                                rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a href="https://github.com/michaeladan7-boot" target="_blank"
+                                rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="https://www.instagram.com/michael_adangabe7/" target="_blank"
+                                rel="noopener noreferrer">Instagram</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2024 Palette — Mick Adan. All rights reserved.</p>
+                <p>&copy; <span id="year"></span> Palette — Mick Adan. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 
 </html>

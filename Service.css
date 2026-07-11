@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
+}
+
 :root {
     --bg-primary: #0e0e12;
     --accent: #ff6b35;
@@ -19,6 +25,8 @@
 body {
     min-height: 100vh;
     overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
     font-family: 'Inter', 'Roboto', sans-serif;
     background-color: #0a0a0f;
 }
@@ -44,6 +52,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .logo {
@@ -105,6 +114,41 @@ body {
     background: #ff5a20;
 }
 
+/* Hamburger toggle — hidden on desktop */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 32px;
+    height: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1100;
+}
+
+.nav-toggle .bar {
+    width: 100%;
+    height: 2px;
+    background: #ffffff;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-toggle.active .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.active .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
 /* ================================
    HERO
    ================================ */
@@ -120,6 +164,8 @@ body {
     background: #07081c;
     position: relative;
     overflow: hidden;
+    padding: 40px 20px;
+    text-align: center;
 }
 
 .hero::before {
@@ -146,6 +192,7 @@ body {
     font-size: 16px;
     color: #888;
     position: relative;
+    max-width: 500px;
 }
 
 /* ================================
@@ -167,6 +214,7 @@ body {
     font-size: clamp(28px, 4vw, 40px);
     color: var(--text-secondary);
     margin-bottom: 60px;
+    text-align: center;
 }
 
 .flex {
@@ -254,12 +302,14 @@ body {
     font-size: clamp(28px, 4vw, 40px);
     color: #ffffff;
     margin-bottom: 12px;
+    text-align: center;
 }
 
 .pricing-sub {
     font-size: 15px;
     color: #666;
     margin-bottom: 60px;
+    text-align: center;
 }
 
 .pricing-grid {
@@ -295,21 +345,6 @@ body {
     border-color: var(--accent);
     background: rgba(255, 107, 53, 0.06);
 }
-/* 
-.pricing-badge {
-    position: absolute;
-    top: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--accent);
-    color: white;
-    font-size: 11px;
-    font-weight: 700;
-    padding: 4px 14px;
-    border-radius: 20px;
-    white-space: nowrap;
-    letter-spacing: 0.5px;
-} */
 
 .pricing-label {
     font-family: "Boldonse", system-ui;
@@ -318,7 +353,13 @@ body {
     margin-bottom: 16px;
 }
 
+/* Reformatted: small "Starting at" label above a short, large price,
+   with the unit small and quiet after it. Keeps the big font from
+   ever having to wrap a long phrase. */
 .pricing-amount {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
     font-size: 42px;
     font-weight: 800;
     color: var(--accent);
@@ -326,10 +367,20 @@ body {
     line-height: 1;
 }
 
-.pricing-amount span {
+.pricing-from {
+    font-family: 'Inter', 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.pricing-unit {
     font-size: 14px;
     font-weight: 500;
     color: #666;
+    margin-left: 4px;
 }
 
 .pricing-list {
@@ -372,6 +423,48 @@ body {
 .pricing-btn:hover {
     background: #ff5a20;
     transform: translateY(-2px);
+}
+
+/* ================================
+   PRICING NOTE — "negotiable" callout
+   ================================ */
+
+.pricing-note {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 48px;
+    padding: 16px 28px;
+    border-radius: 999px;
+    background: rgba(255, 107, 53, 0.1);
+    border: 1px solid rgba(255, 107, 53, 0.35);
+    animation: pricing-note-pulse 2.4s ease-in-out infinite;
+}
+
+.pricing-note-icon {
+    font-size: 20px;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.pricing-note p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+}
+
+.pricing-note strong {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+@keyframes pricing-note-pulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.25);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(255, 107, 53, 0);
+    }
 }
 
 /* ================================
@@ -443,6 +536,50 @@ body {
    ================================ */
 
 @media (max-width: 768px) {
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: min(78vw, 320px);
+        background: rgba(10, 10, 15, 0.98);
+        backdrop-filter: blur(12px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 28px;
+        padding: 40px;
+        transition: right 0.35s ease;
+        z-index: 1050;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-menu a {
+        font-size: 18px;
+    }
+
+    .nav-cta {
+        display: none;
+    }
+
+    .nav-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1040;
+    }
+
+    .nav-overlay.active {
+        display: block;
+    }
 
     .flex,
     .pricing-grid {
@@ -460,19 +597,35 @@ body {
     .pricing {
         padding: 60px 20px;
     }
-
-    .nav-menu {
-        gap: 20px;
-        font-size: 14px;
-    }
 }
 
 @media (max-width: 480px) {
-    .nav-cta {
-        display: none;
+    .nav-container {
+        padding: 0 20px;
     }
 
     .logo {
         font-size: 18px;
+    }
+
+    .hero {
+        padding: 30px 16px;
+    }
+
+    .pricing-note {
+        text-align: center;
+        flex-direction: column;
+        gap: 8px;
+        padding: 20px;
+        border-radius: 16px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
     }
 }

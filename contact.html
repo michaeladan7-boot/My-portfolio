@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact — Pallet</title>
+    <title>Contact — Palette</title>
+    <meta name="description" content="Get in touch with Mick Adan (Palette) — Designer & Developer.">
     <link rel="stylesheet" href="contact.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,29 +19,48 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo"><img src="images/" alt="">Pallet</a>
-            <ul class="nav-menu">
+            <a href="index.html" class="logo">Palette</a>
+
+            <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html">Work</a></li>
                 <li><a href="service.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-        </div>
 
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false"
+                aria-controls="nav-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
 
     <div class="hero">
-        <div><h2>Contact</h2></div>
-        <div><h2>Me</h2></div>
-        
+        <div>
+            <h2>Contact</h2>
+        </div>
+        <div>
+            <h2>Me</h2>
+        </div>
     </div>
 
     <div class="parent">
         <div class="Image">
-            <img src="images/pallete logo - Copy.png" alt="">
+            <img src="images/pallete logo - Copy.png" alt="Palette logo">
         </div>
 
         <div class="contact">
 
-            <form action="" class="fill-up-form" method="POST">
+            <form name="contact" method="POST" class="fill-up-form" id="contact-form" data-netlify="true"
+                netlify-honeypot="bot-field">
+                <!-- Required so Netlify's build detects this form -->
+                <input type="hidden" name="form-name" value="contact">
+
+                <!-- Honeypot — hidden from real users, catches spam bots -->
+                <p class="hidden-field">
+                    <label>Don't fill this out if you're human: <input name="bot-field"></label>
+                </p>
 
                 <div class="fname form">
                     <label for="first-name">First name</label>
@@ -53,7 +73,7 @@
                 </div>
 
                 <div class="fname form">
-                    <label for="phone">Phone</span></label>
+                    <label for="phone">Phone</label>
                     <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
                 </div>
 
@@ -62,7 +82,9 @@
                     <input type="email" id="email" name="email" placeholder="Enter email address" required>
                 </div>
 
-                <button type="submit">Submit</button>
+                <button type="submit" id="submit-btn">Submit</button>
+
+                <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
             </form>
 
         </div>
@@ -87,18 +109,22 @@
                 <div class="footer-section">
                     <h5>Connect</h5>
                     <ul>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">LinkedIn</a></li>
-                        <li><a href="#">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/michael-adangabe-973582401/" target="_blank"
+                                rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a href="https://github.com/michaeladan7-boot" target="_blank"
+                                rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="https://www.instagram.com/michael_adangabe7/" target="_blank"
+                                rel="noopener noreferrer">Instagram</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>2024 Allie. All rights reserved.</p>
+                <p>&copy; <span id="year"></span> Palette — Mick Adan. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
