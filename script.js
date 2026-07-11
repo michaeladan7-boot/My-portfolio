@@ -141,4 +141,72 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    /* ---------- Lightbox (shared by graphic-gallery.html and logo-gallery.html) ---------- */
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    const openLightbox = (img) => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('active');
+    };
+    const closeLightbox = () => lightbox && lightbox.classList.remove('active');
+
+    if (lightbox && lightboxImg) {
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+    }
+
+    /* ---------- Graphic gallery: filter + click-to-enlarge (graphic-gallery.html) ---------- */
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    if (filterBtns.length && galleryItems.length) {
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.dataset.filter;
+                galleryItems.forEach(item => {
+                    const match = filter === 'all' || item.dataset.category === filter;
+                    item.classList.toggle('hidden', !match);
+                });
+            });
+        });
+    }
+
+    const galleryImages = document.querySelectorAll('.gallery-image');
+
+    if (lightbox && lightboxImg && galleryImages.length) {
+        galleryImages.forEach(wrapper => {
+            wrapper.addEventListener('click', () => openLightbox(wrapper.querySelector('img')));
+        });
+    }
+
+    /* ---------- Logo gallery: light/dark toggle + click-to-enlarge (logo-gallery.html) ---------- */
+    const logoBgToggle = document.getElementById('logoBgToggle');
+    const logoGrid = document.getElementById('logoGrid');
+
+    if (logoBgToggle && logoGrid) {
+        logoBgToggle.addEventListener('click', () => {
+            const isDark = logoGrid.dataset.mode === 'dark';
+            logoGrid.dataset.mode = isDark ? 'light' : 'dark';
+            logoBgToggle.textContent = isDark ? 'View on dark' : 'View on light';
+        });
+    }
+
+    const logoThumbs = document.querySelectorAll('.logo-thumb');
+
+    if (lightbox && lightboxImg && logoThumbs.length) {
+        logoThumbs.forEach(thumb => {
+            thumb.addEventListener('click', () => openLightbox(thumb.querySelector('img')));
+        });
+    }
+
 });
