@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="logo-gallery.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
+    <link rel="preload" as="style"
         href="https://fonts.googleapis.com/css2?family=Boldonse&family=Inter:wght@400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+        onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Boldonse&family=Inter:wght@400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"></noscript>
 </head>
 
 <body>
@@ -38,6 +39,8 @@
         </div>
     </nav>
 
+    <main>
+
     <!-- Logo gallery section -->
     <section class="logo-gallery-section" id="logo-gallery">
         <div class="logo-gallery-header">
@@ -49,7 +52,7 @@
         <div class="logo-grid" id="logoGrid" data-mode="dark">
             <figure class="logo-item">
                 <div class="logo-thumb">
-                    <img src="images/Gemini_Generated_Image_6ngwpg6ngwpg6ngw.png" alt="Untitled Logo 1" loading="lazy">
+                    <img src="images/Gemini_Generated_Image_6ngwpg6ngwpg6ngw.png" alt="Untitled Logo 1" loading="lazy" width="800" height="436">
                     <div class="logo-overlay">
                         <span class="view-large">🔍 View Large</span>
                     </div>
@@ -60,7 +63,7 @@
             </figure>
             <figure class="logo-item">
                 <div class="logo-thumb">
-                    <img src="images/altura-logo.png" alt="Untitled Logo 2" loading="lazy">
+                    <img src="images/altura-logo.png" alt="Untitled Logo 2" loading="lazy" width="415" height="415">
                     <div class="logo-overlay">
                         <span class="view-large">🔍 View Large</span>
                     </div>
@@ -71,7 +74,7 @@
             </figure>
             <figure class="logo-item">
                 <div class="logo-thumb">
-                    <img src="images/a bass.png" alt="Untitled Logo 3" loading="lazy">
+                    <img src="images/a bass.png" alt="Untitled Logo 3" loading="lazy" width="800" height="450">
                     <div class="logo-overlay">
                         <span class="view-large">🔍 View Large</span>
                     </div>
@@ -82,7 +85,7 @@
             </figure>
             <figure class="logo-item">
                 <div class="logo-thumb">
-                    <img src="images/falcon.png" alt="Untitled Logo 4" loading="lazy">
+                    <img src="images/falcon.png" alt="Untitled Logo 4" loading="lazy" width="800" height="450">
                     <div class="logo-overlay">
                         <span class="view-large">🔍 View Large</span>
                     </div>
@@ -93,7 +96,7 @@
             </figure>
             <figure class="logo-item">
                 <div class="logo-thumb">
-                    <img src="images/fintex-logo.png" alt="Untitled Logo 5" loading="lazy">
+                    <img src="images/fintex-logo.png" alt="Untitled Logo 5" loading="lazy" width="414" height="415">
                     <div class="logo-overlay">
                         <span class="view-large">🔍 View Large</span>
                     </div>
@@ -104,7 +107,7 @@
             </figure>
             <figure class="logo-item">
                 <div class="logo-thumb">
-                    <img src="images/velocity-logo.png" alt="Untitled Logo 6" loading="lazy">
+                    <img src="images/velocity-logo.png" alt="Untitled Logo 6" loading="lazy" width="414" height="415">
                     <div class="logo-overlay">
                         <span class="view-large">🔍 View Large</span>
                     </div>
@@ -115,7 +118,7 @@
             </figure>
             <figure class="logo-item">
                 <div class="logo-thumb">
-                    <img src="images/pallete logo - Copy.png" alt="Untitled Logo 7" loading="lazy">
+                    <img src="images/pallete logo - Copy.png" alt="Untitled Logo 7" loading="lazy" width="1000" height="714">
                     <div class="logo-overlay">
                         <span class="view-large">🔍 View Large</span>
                     </div>
@@ -126,7 +129,7 @@
             </figure>
             <figure class="logo-item">
                 <div class="logo-thumb">
-                    <img src="images/prime-logo.png" alt="Untitled Logo 8" loading="lazy">
+                    <img src="images/prime-logo.png" alt="Untitled Logo 8" loading="lazy" width="415" height="416">
                     <div class="logo-overlay">
                         <span class="view-large">🔍 View Large</span>
                     </div>
@@ -143,6 +146,8 @@
         <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
         <img src="" alt="" id="lightboxImg">
     </div>
+
+    </main>
 
     <!-- Footer -->
     <footer class="footer">

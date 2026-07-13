@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="service.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
+    <link rel="preload" as="style"
         href="https://fonts.googleapis.com/css2?family=Boldonse&family=Inter:wght@400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+        onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Boldonse&family=Inter:wght@400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"></noscript>
 </head>
 
 <body>
@@ -38,6 +39,8 @@
             </button>
         </div>
     </nav>
+
+    <main>
 
     <div class="hero">
         <h1>Services</h1>
@@ -123,13 +126,15 @@
         </div>
     </div>
 
+    </main>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h5>Palette</h5>
-                    <p>Mick Adan — Designer & Developer</p>
+                    <p>Michael Adangabe — Designer & Developer</p>
                 </div>
                 <div class="footer-section">
                     <h5>Quick Links</h5>
@@ -152,7 +157,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; <span id="year"></span> Palette — Mick Adan. All rights reserved.</p>
+                <p>&copy; <span id="year"></span> Palette — Michael Adangabe. All rights reserved.</p>
             </div>
         </div>
     </footer>
