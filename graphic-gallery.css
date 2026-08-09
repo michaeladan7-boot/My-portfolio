@@ -14,7 +14,7 @@ html {
     --accent: #ff6b35;
     --primary: #000000;
     --secondary: #ffffff;
-    --text-light: #797979;
+    --text-light: #5c5c5c;
     --border-light: #f0f0f0;
     --transition: all 0.3s ease;
 }
@@ -229,8 +229,9 @@ body {
     border-color: rgba(255, 107, 53, 0.35);
 }
 
-/* Image wrapper handles the hover zoom + "View Large" overlay,
-   kept separate from the caption below so only the image reacts. */
+/* Image wrapper — this AND the rule directly below it are what force
+   every image into a consistent card shape, regardless of the source
+   file's real proportions. Both rules must exist together. */
 .gallery-image {
     position: relative;
     overflow: hidden;
@@ -240,7 +241,8 @@ body {
 
 .gallery-image img {
     width: 100%;
-    aspect-ratio: 4/3;
+    height: 100%;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
     display: block;
     transition: transform 0.5s ease;
