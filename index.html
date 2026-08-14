@@ -8,6 +8,7 @@
     <meta name="description"
         content="Mick Adan (Palette) — Designer & Developer crafting clean, functional digital experiences.">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="style"
@@ -44,12 +45,40 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
-            <h1>Design Development<br><span class="highlight">That Works.</span></h1>
-            <p>Crafting digital experiences that engage and convert. Clean design meets functionality.</p>
-            <div class="cta-buttons">
-                <a href="#work" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+        <div class="hero-inner">
+            <div class="hero-content">
+                <h1 class="load-in load-d1">Design Development<br><span class="highlight">That Works.</span></h1>
+                <p class="load-in load-d2">Crafting digital experiences that engage and convert. Clean design meets functionality.</p>
+                <div class="cta-buttons load-in load-d3">
+                    <a href="#work" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+
+            <!-- Signature hero visual: a code-editor mockup, since the
+                 thing Mick actually makes is hand-written HTML/CSS/JS.
+                 Tilts toward the cursor on desktop (see script.js). -->
+            <div class="hero-visual load-in load-d4">
+                <div class="visual-glow"></div>
+                <div class="browser-mockup">
+                    <div class="browser-bar">
+                        <span class="dot dot-red"></span>
+                        <span class="dot dot-yellow"></span>
+                        <span class="dot dot-green"></span>
+                        <span class="browser-url">palette.dev</span>
+                    </div>
+                    <div class="editor-body">
+                        <div class="code-line"><span class="tok-tag">&lt;section</span> <span class="tok-attr">class</span>=<span class="tok-str">"hero"</span><span class="tok-tag">&gt;</span></div>
+                        <div class="code-line indent"><span class="tok-tag">&lt;h1&gt;</span><span class="tok-text">Design. Development.</span><span class="tok-tag">&lt;/h1&gt;</span></div>
+                        <div class="code-line indent"><span class="tok-tag">&lt;p&gt;</span><span class="tok-text">That works.</span><span class="tok-tag">&lt;/p&gt;</span></div>
+                        <div class="code-line"><span class="tok-tag">&lt;/section&gt;</span></div>
+                        <div class="code-line">&nbsp;</div>
+                        <div class="code-line"><span class="tok-comment">/* built by hand — no templates */</span></div>
+                    </div>
+                </div>
+                <div class="float-badge badge-1 float"><span>⚡</span> Fast builds</div>
+                <div class="float-badge badge-2 float"><span>✓</span> Mobile-first</div>
+                <div class="float-badge badge-3 float"><span>◆</span> Custom design</div>
             </div>
         </div>
     </section>
@@ -57,7 +86,7 @@
     <!-- Featured Work Section -->
     <section class="featured-work" id="work">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal">
                 <h2>Featured Work</h2>
                 <p>A selection of recent projects showcasing design and development expertise</p>
             </div>
@@ -134,7 +163,7 @@
 
                 <article class="portfolio-item">
                     <div class="project-image">
-                        <img src="images/fix up imgae.png" alt="Graphic design showcase" loading="lazy" width="1200" height="857">
+                        <img src="graphic gallery/sneaker.png" alt="Graphic design showcase" loading="lazy" width="1200" height="857">
                         <div class="project-overlay">
                             <a href="graphic-gallery.html" class="view-project">View Project</a>
                         </div>
@@ -173,10 +202,10 @@
     <section class="about" id="about">
         <div class="container">
             <div class="about-grid">
-                <div class="about-image">
+                <div class="about-image reveal">
                     <img src="images/𝑹&𝑮🇺🇸 on TikTok.jpg" alt="Mick Adan - Designer and Developer" loading="lazy">
                 </div>
-                <div class="about-content">
+                <div class="about-content reveal reveal-d1">
                     <h2>About Me</h2>
                     <h3>Designer & Developer</h3>
                     <p>I'm passionate about creating beautiful, functional digital experiences. With expertise in both
@@ -184,17 +213,17 @@
 
                     <h4>Skills & Expertise</h4>
                     <div class="skills-grid">
-                        <div class="skill-item">
+                        <div class="skill-item reveal reveal-d1">
                             <span class="skill-icon"><img src="images/analytics2.svg" alt="" width="70" height="40"></span>
                             <h5>Design</h5>
                             <p>Figma, UI/UX, Branding</p>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item reveal reveal-d2">
                             <span class="skill-icon"><img src="images/analytics1.svg" alt="" width="70" height="40"></span>
                             <h5>Development</h5>
                             <p>HTML, CSS, JavaScript</p>
                         </div>
-                        <div class="skill-item">
+                        <div class="skill-item reveal reveal-d3">
                             <span class="skill-icon"><img src="images/analytics3.svg" alt="" width="70" height="40"></span>
                             <h5>Creative</h5>
                             <p>Logo Design, Graphics</p>
@@ -210,25 +239,25 @@
     <!-- Services Section -->
     <section class="services">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal">
                 <h2>Services</h2>
                 <p>What I can do for your business</p>
             </div>
 
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card reveal reveal-d1">
                     <h3>Web Design</h3>
                     <p>Modern, clean designs that reflect your brand identity and engage your audience.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card reveal reveal-d2">
                     <h3>Web Development</h3>
                     <p>Responsive, fast-loading websites built with clean code and best practices.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card reveal reveal-d3">
                     <h3>Branding</h3>
                     <p>Complete brand identity solutions including logos, color palettes, and guidelines.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card reveal reveal-d4">
                     <h3>UI/UX Design</h3>
                     <p>User-centered design that improves engagement and conversion rates.</p>
                 </div>
@@ -238,7 +267,7 @@
 
     <!-- CTA Section -->
     <section class="cta-section" id="contact">
-        <div class="container">
+        <div class="container reveal">
             <h2>Ready to work together?</h2>
             <p>Let's create something amazing</p>
             <a href="contact.html" class="btn btn-primary btn-large">Get in Touch</a>

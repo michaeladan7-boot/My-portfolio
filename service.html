@@ -8,6 +8,7 @@
     <meta name="description"
         content="Web development, graphic design, and logo design services from Mick Adan (Palette).">
     <link rel="stylesheet" href="service.css">
+    <link rel="stylesheet" href="animations.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="style"
@@ -43,22 +44,22 @@
     <main>
 
     <div class="hero">
-        <h1>Services</h1>
-        <p>Everything you need to build a brand that stands out.</p>
+        <h1 class="load-in load-d1">Services</h1>
+        <p class="load-in load-d2">Everything you need to build a brand that stands out.</p>
     </div>
 
     <div class="services">
-        <h2>What I Do</h2>
+        <h2 class="reveal">What I Do</h2>
         <div class="flex">
-            <div class="box box1">
+            <div class="box box1 reveal reveal-d1">
                 <h3>Web Development</h3>
                 <p>Responsive, fast-loading websites built with clean code and modern best practices.</p>
             </div>
-            <div class="box box2">
+            <div class="box box2 reveal reveal-d2">
                 <h3>Graphic Design</h3>
                 <p>Bold visuals and creative direction that communicate your brand's identity clearly.</p>
             </div>
-            <div class="box box3">
+            <div class="box box3 reveal reveal-d3">
                 <h3>Logo Design</h3>
                 <p>Memorable marks and wordmarks crafted to represent your brand at every scale.</p>
             </div>
@@ -67,11 +68,11 @@
 
     <!-- Pricing Section -->
     <div class="pricing">
-        <h2>Pricing</h2>
-        <p class="pricing-sub">Simple, transparent pricing. No hidden fees.</p>
+        <h2 class="reveal">Pricing</h2>
+        <p class="pricing-sub reveal">Simple, transparent pricing. No hidden fees.</p>
         <div class="pricing-grid">
 
-            <div class="pricing-card">
+            <div class="pricing-card reveal reveal-d1">
                 <div class="pricing-label">Web Design</div>
                 <div class="pricing-amount">
                     <span class="pricing-from">Starting at</span>
@@ -87,7 +88,7 @@
                 <a href="contact.html" class="pricing-btn">Get Started</a>
             </div>
 
-            <div class="pricing-card featured">
+            <div class="pricing-card featured reveal reveal-d2">
                 <div class="pricing-label">Graphic Design</div>
                 <div class="pricing-amount">
                     <span class="pricing-from">Starting at</span>
@@ -102,7 +103,7 @@
                 <a href="contact.html" class="pricing-btn">Get Started</a>
             </div>
 
-            <div class="pricing-card">
+            <div class="pricing-card reveal reveal-d3">
                 <div class="pricing-label">Logo Design</div>
                 <div class="pricing-amount">
                     <span class="pricing-from">Starting at</span>
@@ -120,7 +121,7 @@
 
         </div>
 
-        <div class="pricing-note">
+        <div class="pricing-note reveal">
             <span class="pricing-note-icon">💬</span>
             <p>All prices are <strong>negotiable</strong> — let's talk and find something that fits your budget.</p>
         </div>

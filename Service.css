@@ -12,7 +12,10 @@ html {
 
 :root {
     --bg-primary: #0e0e12;
-    --accent: #ff6b35;
+    --accent: #f5a623;
+    --accent-light: #ffc857;
+    --card-bg: #10162b;
+    --card-border: rgba(255, 255, 255, 0.08);
     --text-light: #797979;
     --text-secondary: #ffffff;
     --text-muted: rgba(213, 213, 213, 0.924);
@@ -111,7 +114,7 @@ body {
 }
 
 .nav-cta:hover {
-    background: #ff5a20;
+    background: #e8940f;
 }
 
 /* Hamburger toggle — hidden on desktop */
@@ -176,7 +179,7 @@ body {
     transform: translateX(-50%);
     width: 500px;
     height: 300px;
-    background: radial-gradient(ellipse, rgba(255, 107, 53, 0.1) 0%, transparent 70%);
+    background: radial-gradient(ellipse, rgba(245, 166, 35, 0.1) 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -250,7 +253,7 @@ body {
 }
 
 .box1:hover {
-    box-shadow: 0 12px 32px rgba(255, 107, 53, 0.35);
+    box-shadow: 0 12px 32px rgba(245, 166, 35, 0.35);
 }
 
 .box2 {
@@ -265,8 +268,8 @@ body {
 
 .box2:hover,
 .box3:hover {
-    box-shadow: 0 12px 32px rgba(255, 107, 53, 0.15);
-    border-color: rgba(255, 107, 53, 0.3);
+    box-shadow: 0 12px 32px rgba(245, 166, 35, 0.15);
+    border-color: rgba(245, 166, 35, 0.3);
 }
 
 .box h3 {
@@ -336,14 +339,14 @@ body {
 }
 
 .pricing-card:hover {
-    border-color: rgba(255, 107, 53, 0.3);
+    border-color: rgba(245, 166, 35, 0.3);
     transform: translateY(-6px);
-    box-shadow: 0 16px 40px rgba(255, 107, 53, 0.1);
+    box-shadow: 0 16px 40px rgba(245, 166, 35, 0.1);
 }
 
 .pricing-card.featured {
     border-color: var(--accent);
-    background: rgba(255, 107, 53, 0.06);
+    background: rgba(245, 166, 35, 0.06);
 }
 
 .pricing-label {
@@ -421,7 +424,7 @@ body {
 }
 
 .pricing-btn:hover {
-    background: #ff5a20;
+    background: #e8940f;
     transform: translateY(-2px);
 }
 
@@ -436,8 +439,8 @@ body {
     margin-top: 48px;
     padding: 16px 28px;
     border-radius: 999px;
-    background: rgba(255, 107, 53, 0.1);
-    border: 1px solid rgba(255, 107, 53, 0.35);
+    background: rgba(245, 166, 35, 0.1);
+    border: 1px solid rgba(245, 166, 35, 0.35);
     animation: pricing-note-pulse 2.4s ease-in-out infinite;
 }
 
@@ -460,10 +463,10 @@ body {
 
 @keyframes pricing-note-pulse {
     0%, 100% {
-        box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.25);
+        box-shadow: 0 0 0 0 rgba(245, 166, 35, 0.25);
     }
     50% {
-        box-shadow: 0 0 0 10px rgba(255, 107, 53, 0);
+        box-shadow: 0 0 0 10px rgba(245, 166, 35, 0);
     }
 }
 
@@ -472,9 +475,9 @@ body {
    ================================ */
 
 .footer {
-    background: #f8f8f8;
+    background: #05070f;
     padding: 60px 20px 30px;
-    border-top: 1px solid var(--border-light);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .container {
@@ -493,7 +496,7 @@ body {
 .footer-section h5 {
     font-size: 14px;
     font-weight: 600;
-    color: var(--primary);
+    color: #ffffff;
     text-transform: uppercase;
     margin-bottom: 15px;
     letter-spacing: 1px;
@@ -526,7 +529,7 @@ body {
 .footer-bottom {
     text-align: center;
     padding-top: 30px;
-    border-top: 1px solid var(--border-light);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
     color: var(--text-light);
     font-size: 14px;
 }

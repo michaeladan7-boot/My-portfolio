@@ -54,8 +54,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* ---------- Scroll-reveal for portfolio items ---------- */
-    const revealTargets = document.querySelectorAll('.portfolio-item');
+    /* ---------- Scroll-reveal, site-wide ----------
+       Watches .portfolio-item (index.html cards) AND
+       any element marked .reveal (used across every page). */
+    const revealTargets = document.querySelectorAll('.portfolio-item, .reveal');
 
     if ('IntersectionObserver' in window && revealTargets.length) {
         const revealObserver = new IntersectionObserver((entries, observer) => {
@@ -71,6 +73,29 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         // Fallback: no IntersectionObserver support, just show everything
         revealTargets.forEach(item => item.classList.add('in-view'));
+    }
+
+    /* ---------- Hero visual — mouse-tilt interaction (index.html) ---------- */
+    const heroVisual = document.querySelector('.hero-visual');
+    const heroMockup = document.querySelector('.browser-mockup');
+
+    if (heroVisual && heroMockup && window.matchMedia('(hover: hover)').matches) {
+        const maxTilt = 8; // degrees — subtle, not a gimmick
+
+        heroVisual.addEventListener('mousemove', (e) => {
+            const rect = heroVisual.getBoundingClientRect();
+            const x = (e.clientX - rect.left) / rect.width;  // 0 -> 1
+            const y = (e.clientY - rect.top) / rect.height;  // 0 -> 1
+            const rotateY = (x - 0.5) * maxTilt * 2;
+            const rotateX = (0.5 - y) * maxTilt * 2;
+            heroMockup.style.transform =
+                `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+        });
+
+        heroVisual.addEventListener('mouseleave', () => {
+            heroMockup.style.transform =
+                'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+        });
     }
 
     /* ---------- Auto-update footer year ---------- */

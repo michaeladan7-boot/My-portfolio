@@ -11,7 +11,8 @@ html {
 }
 
 :root {
-    --accent: #ff6b35;
+    --accent: #f5a623;
+    --accent-light: #ffc857;
     --primary: #000000;
     --secondary: #ffffff;
     --text-light: #5c5c5c;
@@ -109,7 +110,7 @@ body {
 }
 
 .nav-cta:hover {
-    background: #ff5a20;
+    background: #e8940f;
 }
 
 /* Hamburger toggle — hidden on desktop */
@@ -199,7 +200,7 @@ body {
 
 .filter-btn:hover {
     color: #fff;
-    border-color: rgba(255, 107, 53, 0.4);
+    border-color: rgba(245, 166, 35, 0.4);
 }
 
 .filter-btn.active {
@@ -226,7 +227,7 @@ body {
 
 .gallery-item:hover {
     transform: translateY(-4px);
-    border-color: rgba(255, 107, 53, 0.35);
+    border-color: rgba(245, 166, 35, 0.35);
 }
 
 /* Image wrapper — this AND the rule directly below it are what force
@@ -339,9 +340,9 @@ body {
    ================================ */
 
 .footer {
-    background: #f8f8f8;
+    background: #05070f;
     padding: 60px 20px 30px;
-    border-top: 1px solid var(--border-light);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .container {
@@ -360,7 +361,7 @@ body {
 .footer-section h5 {
     font-size: 14px;
     font-weight: 600;
-    color: var(--primary);
+    color: #ffffff;
     text-transform: uppercase;
     margin-bottom: 15px;
     letter-spacing: 1px;
@@ -393,7 +394,7 @@ body {
 .footer-bottom {
     text-align: center;
     padding-top: 30px;
-    border-top: 1px solid var(--border-light);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
     color: var(--text-light);
     font-size: 14px;
 }
