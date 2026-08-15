@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.15 });
+        }, { threshold: 0.1, rootMargin: '0px 0px -5% 0px' });
 
         revealTargets.forEach(item => revealObserver.observe(item));
     } else {
