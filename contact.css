@@ -208,27 +208,12 @@ body {
     flex-wrap: wrap;
 }
 
-.Image {
-    width: 50%;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0 20px 0 0;
-    overflow: hidden;
-}
-
-.Image img {
-    width: 100%;
-    display: block;
-}
-
 /* ================================
    CONTACT SIDE
    ================================ */
 
 .contact {
-    width: 50%;
+    width: 100%;
     min-height: 100vh;
     background-color: #0a0a0f;
     display: flex;
@@ -324,7 +309,8 @@ body {
     text-transform: uppercase;
 }
 
-.fname input {
+.fname input,
+.fname textarea {
     width: 100%;
     padding: 14px 16px;
     background-color: rgba(255, 255, 255, 0.05);
@@ -334,20 +320,24 @@ body {
     font-family: 'Inter', 'Roboto', sans-serif;
     color: #ffffff;
     transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+    resize: vertical;
 }
 
-.fname input::placeholder {
+.fname input::placeholder,
+.fname textarea::placeholder {
     color: rgba(255, 255, 255, 0.2);
 }
 
-.fname input:focus {
+.fname input:focus,
+.fname textarea:focus {
     outline: none;
     border-color: rgba(245, 166, 35, 0.6);
     background-color: rgba(245, 166, 35, 0.05);
     box-shadow: 0 0 0 3px rgba(245, 166, 35, 0.1);
 }
 
-.fname input:invalid:not(:placeholder-shown) {
+.fname input:invalid:not(:placeholder-shown),
+.fname textarea:invalid:not(:placeholder-shown) {
     border-color: rgba(216, 90, 48, 0.6);
 }
 
@@ -524,20 +514,6 @@ body {
         flex-direction: column;
     }
 
-    .Image,
-    .contact {
-        width: 100%;
-    }
-
-    .Image {
-        height: 260px;
-    }
-
-    .Image img {
-        height: 100%;
-        object-fit: contain;
-        padding: 30px;
-    }
 
     .contact {
         min-height: auto;
@@ -569,10 +545,6 @@ body {
 
     .logo {
         font-size: 18px;
-    }
-
-    .Image {
-        height: 200px;
     }
 }
 
