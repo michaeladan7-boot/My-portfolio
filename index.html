@@ -22,6 +22,11 @@
 
 <body>
 
+    <!-- Fixed full-page Vanta background — sits behind everything,
+         sized to the viewport (not the whole scrollable page), so
+         it stays cheap to render as you scroll. -->
+    <div id="vanta-bg"></div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -47,7 +52,7 @@
     <main>
 
         <!-- Hero Section -->
-        <section class="hero">
+        <section class="hero" id="hero">
             <div class="hero-inner">
                 <div class="hero-content">
                     <h1 class="load-in load-d1">Design Development<br><span class="highlight">That Works.</span></h1>
@@ -403,6 +408,29 @@
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script>
+        // Vanta NET background on the hero — skipped entirely if the
+        // person prefers reduced motion, so it never fights that setting.
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            VANTA.NET({
+                el: "#vanta-bg",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                scale: 1.00,
+                scaleMobile: 1.00,
+                backgroundColor: 0x0a0a0a,
+                color: 0x8c8c8c,
+                points: 8.00,
+                maxDistance: 22.00,
+                spacing: 18.00
+            });
+        }
+    </script>
     <script src="script.js"></script>
 </body>
 

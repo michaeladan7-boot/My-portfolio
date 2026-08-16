@@ -12,12 +12,18 @@ html {
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #050505;
+    background-color: transparent;
     color: #1a1a1a;
     line-height: 1.6;
     overflow-x: hidden;
     width: 100%;
     max-width: 100%;
+}
+
+#vanta-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
 }
 
 :root {
@@ -168,7 +174,7 @@ body {
 .hero {
     min-height: 100vh;
     width: 100%;
-    background: #0a0a0a;
+    background: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -472,7 +478,7 @@ body {
 
 .featured-work {
     padding: 100px 20px;
-    background: #0a0a0a;
+    background: rgba(10, 10, 10, 0.82);
 }
 
 .section-header {
@@ -634,7 +640,7 @@ body {
 
 .about {
     padding: 0;
-    background: #0a0a0a;
+    background: rgba(10, 10, 10, 0.82);
 }
 
 .grid-hero {
@@ -854,7 +860,7 @@ body {
 
 .services {
     padding: 100px 20px;
-    background: #0a0a0a;
+    background: rgba(10, 10, 10, 0.82);
 }
 
 .services-grid {
@@ -910,7 +916,7 @@ body {
 
 .cta-section {
     padding: 100px 20px;
-    background: #020202;
+    background: rgba(2, 2, 2, 0.85);
     backdrop-filter: blur(40px);
     -webkit-backdrop-filter: blur(40px);
     color: white;
@@ -955,7 +961,7 @@ body {
    ================================ */
 
 .footer {
-    background: #050505;
+    background: rgba(5, 5, 5, 0.9);
     padding: 60px 20px 30px;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
