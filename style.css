@@ -805,39 +805,41 @@ body {
         min-height: auto;
     }
 
-    .grid-lines,
+    /* The ruled-grid background is absolutely positioned so it can sit
+       exactly behind the desktop grid without affecting layout height.
+       On mobile the content stacks in normal flow instead, so the
+       overlay is hidden and each block gets its own border-bottom
+       to keep the "ruled" divider look without the height mismatch
+       that let content float over the next section. */
+    .grid-lines {
+        display: none;
+    }
+
     .grid-content {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
-
-    .grid-lines div {
-        border-right: none;
-        border-bottom: 1px solid var(--card-border);
-    }
-
-    .grid-lines div:nth-child(n+13) {
-        border-bottom: 1px solid var(--card-border);
-    }
-
-    .grid-lines div:last-child {
-        border-bottom: none;
+        position: static;
+        display: block;
     }
 
     .gh-headline,
     .gh-bio,
     .gh-links,
     .gh-footnotes {
-        grid-column: 1 / 2;
-        grid-row: auto;
+        grid-column: unset;
+        grid-row: unset;
         padding: 28px 24px;
+        border-bottom: 1px solid var(--card-border);
     }
 
     .gh-social {
-        grid-column: 1 / 2;
-        grid-row: auto;
+        grid-column: unset;
+        grid-row: unset;
         writing-mode: unset;
         padding: 16px 24px;
+        border-bottom: 1px solid var(--card-border);
+    }
+
+    .gh-social:last-child {
+        border-bottom: none;
     }
 
     .gh-social span {
