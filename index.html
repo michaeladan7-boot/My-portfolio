@@ -14,7 +14,10 @@
     <link rel="preload" as="style"
         href="https://fonts.googleapis.com/css2?family=Boldonse&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Boldonse&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"></noscript>
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Boldonse&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap">
+    </noscript>
 </head>
 
 <body>
@@ -43,236 +46,326 @@
 
     <main>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-inner">
-            <div class="hero-content">
-                <h1 class="load-in load-d1">Design Development<br><span class="highlight">That Works.</span></h1>
-                <p class="load-in load-d2">Crafting digital experiences that engage and convert. Clean design meets functionality.</p>
-                <div class="cta-buttons load-in load-d3">
-                    <a href="#work" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-inner">
+                <div class="hero-content">
+                    <h1 class="load-in load-d1">Design Development<br><span class="highlight">That Works.</span></h1>
+                    <p class="load-in load-d2">Crafting digital experiences that engage and convert. Clean design meets
+                        functionality.</p>
+                    <div class="cta-buttons load-in load-d3">
+                        <a href="#work" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Signature hero visual: a code-editor mockup, since the
+                <!-- Signature hero visual: a code-editor mockup, since the
                  thing Mick actually makes is hand-written HTML/CSS/JS.
                  Tilts toward the cursor on desktop (see script.js). -->
-            <div class="hero-visual load-in load-d4">
-                <div class="visual-glow"></div>
-                <div class="browser-mockup">
-                    <div class="browser-bar">
-                        <span class="dot dot-red"></span>
-                        <span class="dot dot-yellow"></span>
-                        <span class="dot dot-green"></span>
-                        <span class="browser-url">palette.dev</span>
-                    </div>
-                    <div class="editor-body">
-                        <div class="code-line"><span class="tok-tag">&lt;section</span> <span class="tok-attr">class</span>=<span class="tok-str">"hero"</span><span class="tok-tag">&gt;</span></div>
-                        <div class="code-line indent"><span class="tok-tag">&lt;h1&gt;</span><span class="tok-text">Design. Development.</span><span class="tok-tag">&lt;/h1&gt;</span></div>
-                        <div class="code-line indent"><span class="tok-tag">&lt;p&gt;</span><span class="tok-text">That works.</span><span class="tok-tag">&lt;/p&gt;</span></div>
-                        <div class="code-line"><span class="tok-tag">&lt;/section&gt;</span></div>
-                        <div class="code-line">&nbsp;</div>
-                        <div class="code-line"><span class="tok-comment">/* built by hand — no templates */</span></div>
-                    </div>
-                </div>
-                <div class="float-badge badge-1 float"><span>⚡</span> Fast builds</div>
-                <div class="float-badge badge-2 float"><span>✓</span> Mobile-first</div>
-                <div class="float-badge badge-3 float"><span>◆</span> Custom design</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Work Section -->
-    <section class="featured-work" id="work">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2>Featured Work</h2>
-                <p>A selection of recent projects showcasing design and development expertise</p>
-            </div>
-
-            <div class="portfolio-grid">
-                <article class="portfolio-item featured">
-                    <div class="project-image">
-                        <img src="images/nexera.jpg" alt="Nexera AI startup landing page" loading="lazy" width="1200" height="566">
-                        <div class="project-overlay">
-                            <a href="https://nexera-project.netlify.app/" target="_blank" rel="noopener noreferrer" class="view-project">View Project</a>
+                <div class="hero-visual load-in load-d4">
+                    <div class="visual-glow"></div>
+                    <div class="browser-mockup">
+                        <div class="browser-bar">
+                            <span class="dot dot-red"></span>
+                            <span class="dot dot-yellow"></span>
+                            <span class="dot dot-green"></span>
+                            <span class="browser-url">palette.dev</span>
+                        </div>
+                        <div class="editor-body">
+                            <div class="code-line"><span class="tok-tag">&lt;section</span> <span
+                                    class="tok-attr">class</span>=<span class="tok-str">"hero"</span><span
+                                    class="tok-tag">&gt;</span></div>
+                            <div class="code-line indent"><span class="tok-tag">&lt;h1&gt;</span><span
+                                    class="tok-text">Design. Development.</span><span class="tok-tag">&lt;/h1&gt;</span>
+                            </div>
+                            <div class="code-line indent"><span class="tok-tag">&lt;p&gt;</span><span
+                                    class="tok-text">That works.</span><span class="tok-tag">&lt;/p&gt;</span></div>
+                            <div class="code-line"><span class="tok-tag">&lt;/section&gt;</span></div>
+                            <div class="code-line">&nbsp;</div>
+                            <div class="code-line"><span class="tok-comment">/* built by hand — no templates */</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="project-details">
-                        <h3>Nexera</h3>
-                        <p>AI startup landing page — a deep-violet and electric-cyan design built with HTML, CSS & JS.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Web Design</span>
-                            <span class="tag">Frontend</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="portfolio-item">
-                    <div class="project-image">
-                        <img src="images/estatly.jpg" alt="Estatly real estate platform" loading="lazy" width="1200" height="568">
-                        <div class="project-overlay">
-                            <a href="https://estatly-real-estate.netlify.app/" target="_blank" rel="noopener noreferrer" class="view-project">View Project</a>
-                        </div>
-                    </div>
-                    <div class="project-details">
-                        <h3>Estatly</h3>
-                        <p>Real estate marketplace platform for Accra property listings.</p>
-                        <div class="project-tags">
-                            <span class="tag">Web App</span>
-                            <span class="tag">UI/UX</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="portfolio-item">
-                    <div class="project-image">
-                        <img src="images/HR.jpg" alt="Meridian HR consultancy website" loading="lazy" width="1200" height="568">
-                        <div class="project-overlay">
-                            <a href="https://m-hr.netlify.app/" target="_blank" rel="noopener noreferrer" class="view-project">View Project</a>
-                        </div>
-                    </div>
-                    <div class="project-details">
-                        <h3>HR</h3>
-                        <p>HR assisting cooperation.</p>
-                        <div class="project-tags">
-                            <span class="tag">Web App</span>
-                            <span class="tag">UI/UX</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="portfolio-item">
-                    <div class="project-image">
-                        <img src="images/iron.jpg" alt="Iron Fitness brand" loading="lazy" width="1200" height="568">
-                        <div class="project-overlay">
-                            <a href="https://iron-path-fitness.netlify.app/" target="_blank" rel="noopener noreferrer" class="view-project">View Project</a>
-                        </div>
-                    </div>
-                    <div class="project-details">
-                        <h3>Iron Path Fitness</h3>
-                        <p>Fitness brand website with a mobile-first responsive design.</p>
-                        <div class="project-tags">
-                            <span class="tag">Branding</span>
-                            <span class="tag">Web Design</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="portfolio-item">
-                    <div class="project-image">
-                        <img src="graphic gallery/sneaker.jpg" alt="Graphic design showcase" loading="lazy" width="1200" height="857">
-                        <div class="project-overlay">
-                            <a href="graphic-gallery.html" class="view-project">View Project</a>
-                        </div>
-                    </div>
-                    <div class="project-details">
-                        <h3>Graphic Design Showcase</h3>
-                        <p>Creative design collection featuring posters and visual identities.</p>
-                        <div class="project-tags">
-                            <span class="tag">Graphic Design</span>
-                            <span class="tag">Branding</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="portfolio-item">
-                    <div class="project-image">
-                        <img src="images/pallete logo - Copy.png" alt="Logo design showcase" loading="lazy" width="1000" height="714">
-                        <div class="project-overlay">
-                            <a href="logo-gallery.html" class="view-project">View Project</a>
-                        </div>
-                    </div>
-                    <div class="project-details">
-                        <h3>Logo Design Showcase</h3>
-                        <p>Brand mark collection spanning identity, wordmarks, and icon design.</p>
-                        <div class="project-tags">
-                            <span class="tag">Logo Design</span>
-                            <span class="tag">Branding</span>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-image reveal">
-                    <img src="images/mick-profile.jpg" alt="Mick Adan - Designer and Developer" loading="lazy">
-                </div>
-                <div class="about-content reveal reveal-d1">
-                    <h2>About Me</h2>
-                    <h3>Designer & Developer</h3>
-                    <p>I'm passionate about creating beautiful, functional digital experiences. With expertise in both
-                        design and frontend development, I bridge the gap between aesthetics and functionality.</p>
-
-                    <h4>Skills & Expertise</h4>
-                    <div class="skills-grid">
-                        <div class="skill-item reveal reveal-d1">
-                            <span class="skill-icon"><img src="images/analytics2.svg" alt="" width="70" height="40"></span>
-                            <h5>Design</h5>
-                            <p>Figma, UI/UX, Branding</p>
-                        </div>
-                        <div class="skill-item reveal reveal-d2">
-                            <span class="skill-icon"><img src="images/analytics1.svg" alt="" width="70" height="40"></span>
-                            <h5>Development</h5>
-                            <p>HTML, CSS, JavaScript</p>
-                        </div>
-                        <div class="skill-item reveal reveal-d3">
-                            <span class="skill-icon"><img src="images/analytics3.svg" alt="" width="70" height="40"></span>
-                            <h5>Creative</h5>
-                            <p>Logo Design, Graphics</p>
-                        </div>
-                    </div>
-
-                    <a href="#contact" class="btn btn-primary">Start Your Project</a>
+                    <div class="float-badge badge-1 float">Fast builds</div>
+                    <div class="float-badge badge-2 float">Mobile-first</div>
+                    <div class="float-badge badge-3 float">Custom design</div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Services Section -->
-    <section class="services">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2>Services</h2>
-                <p>What I can do for your business</p>
+        <!-- Featured Work Section -->
+        <section class="featured-work" id="work">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Featured Work</h2>
+                    <p>A selection of recent projects showcasing design and development expertise</p>
+                </div>
+
+                <div class="portfolio-grid">
+                    <article class="portfolio-item featured">
+                        <div class="project-image">
+                            <img src="images/nexera.jpg" alt="Nexera AI startup landing page" loading="lazy"
+                                width="1200" height="566">
+                            <div class="project-overlay">
+                                <a href="https://nexera-project.netlify.app/" target="_blank" rel="noopener noreferrer"
+                                    class="view-project">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <h3>Nexera</h3>
+                            <p>AI startup landing page — a deep-violet and electric-cyan design built with HTML, CSS &
+                                JS.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Web Design</span>
+                                <span class="tag">Frontend</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="portfolio-item">
+                        <div class="project-image">
+                            <img src="images/estatly.jpg" alt="Estatly real estate platform" loading="lazy" width="1200"
+                                height="568">
+                            <div class="project-overlay">
+                                <a href="https://estatly-real-estate.netlify.app/" target="_blank"
+                                    rel="noopener noreferrer" class="view-project">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <h3>Estatly</h3>
+                            <p>Real estate marketplace platform for Accra property listings.</p>
+                            <div class="project-tags">
+                                <span class="tag">Web App</span>
+                                <span class="tag">UI/UX</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="portfolio-item">
+                        <div class="project-image">
+                            <img src="images/HR.jpg" alt="Meridian HR consultancy website" loading="lazy" width="1200"
+                                height="568">
+                            <div class="project-overlay">
+                                <a href="https://m-hr.netlify.app/" target="_blank" rel="noopener noreferrer"
+                                    class="view-project">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <h3>HR</h3>
+                            <p>HR assisting cooperation.</p>
+                            <div class="project-tags">
+                                <span class="tag">Web App</span>
+                                <span class="tag">UI/UX</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="portfolio-item">
+                        <div class="project-image">
+                            <img src="images/iron.jpg" alt="Iron Fitness brand" loading="lazy" width="1200"
+                                height="568">
+                            <div class="project-overlay">
+                                <a href="https://iron-path-fitness.netlify.app/" target="_blank"
+                                    rel="noopener noreferrer" class="view-project">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <h3>Iron Path Fitness</h3>
+                            <p>Fitness brand website with a mobile-first responsive design.</p>
+                            <div class="project-tags">
+                                <span class="tag">Branding</span>
+                                <span class="tag">Web Design</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="portfolio-item">
+                        <div class="project-image">
+                            <img src="graphic gallery/sneaker.jpg" alt="Graphic design showcase" loading="lazy"
+                                width="1200" height="857">
+                            <div class="project-overlay">
+                                <a href="graphic-gallery.html" class="view-project">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <h3>Graphic Design Showcase</h3>
+                            <p>Creative design collection featuring posters and visual identities.</p>
+                            <div class="project-tags">
+                                <span class="tag">Graphic Design</span>
+                                <span class="tag">Branding</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="portfolio-item">
+                        <div class="project-image">
+                            <img src="images/pallete logo - Copy.png" alt="Logo design showcase" loading="lazy"
+                                width="1000" height="714">
+                            <div class="project-overlay">
+                                <a href="logo-gallery.html" class="view-project">View Project</a>
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <h3>Logo Design Showcase</h3>
+                            <p>Brand mark collection spanning identity, wordmarks, and icon design.</p>
+                            <div class="project-tags">
+                                <span class="tag">Logo Design</span>
+                                <span class="tag">Branding</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </div>
+        </section>
 
-            <div class="services-grid">
-                <div class="service-card reveal reveal-d1">
-                    <h3>Web Design</h3>
-                    <p>Modern, clean designs that reflect your brand identity and engage your audience.</p>
+        <!-- About Section — grid-lined "one-pager" layout, dark themed -->
+        <section class="about" id="about">
+            <div class="grid-hero">
+                <div class="grid-lines">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
                 </div>
-                <div class="service-card reveal reveal-d2">
-                    <h3>Web Development</h3>
-                    <p>Responsive, fast-loading websites built with clean code and best practices.</p>
-                </div>
-                <div class="service-card reveal reveal-d3">
-                    <h3>Branding</h3>
-                    <p>Complete brand identity solutions including logos, color palettes, and guidelines.</p>
-                </div>
-                <div class="service-card reveal reveal-d4">
-                    <h3>UI/UX Design</h3>
-                    <p>User-centered design that improves engagement and conversion rates.</p>
+
+                <div class="grid-content">
+                    <div class="gh-headline">
+                        <p class="gh-eyebrow reveal">Hello there,</p>
+                        <h2 class="reveal reveal-d1">I'm Mick<span class="gh-star">*</span></h2>
+                    </div>
+
+                    <a href="https://www.linkedin.com/in/michael-adangabe-973582401/" target="_blank"
+                        rel="noopener noreferrer" class="gh-social">
+                        <span>LinkedIn</span>
+                    </a>
+
+                    <div class="gh-bio reveal">
+                        <p>Hi! I'm a designer & developer based in Accra. Every day I learn, build and
+                            practice to create clean, functional digital experiences. It's beautiful to have
+                            a passion and a craft at the same time, don't you think?</p>
+                    </div>
+
+                    <div class="gh-links reveal reveal-d1">
+                        <a href="#" class="gh-link">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                            </svg>
+                            <span>If you want my resume <sup>**</sup></span>
+                        </a>
+                        <a href="contact.html" class="gh-link">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                                </path>
+                            </svg>
+                            <span>Or have a chat</span>
+                        </a>
+                    </div>
+
+                    <a href="https://github.com/michaeladan7-boot" target="_blank" rel="noopener noreferrer"
+                        class="gh-social">
+                        <span>GitHub</span>
+                    </a>
+
+                    <div class="gh-footnotes reveal">
+                        <p><span class="gh-star">*</span> A self-taught designer & developer, open to freelance
+                            offers and junior roles.</p>
+                        <p><span class="gh-star">**</span> If you want my portfolio too, just ask — I don't bite.</p>
+                    </div>
+
+                    <a href="https://www.instagram.com/michael_adangabe7/" target="_blank" rel="noopener noreferrer"
+                        class="gh-social">
+                        <span>Instagram</span>
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section" id="contact">
-        <div class="container reveal">
-            <h2>Ready to work together?</h2>
-            <p>Let's create something amazing</p>
-            <a href="contact.html" class="btn btn-primary btn-large">Get in Touch</a>
-        </div>
-    </section>
+        <!-- Services Section -->
+        <section class="services">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Services</h2>
+                    <p>What I can do for your business</p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card reveal reveal-d1">
+                        <div class="service-icon">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="14" rx="2"></rect>
+                                <line x1="3" y1="9" x2="21" y2="9"></line>
+                                <line x1="8" y1="14" x2="13" y2="14"></line>
+                            </svg>
+                        </div>
+                        <h3>Web Design</h3>
+                        <p>Modern, clean designs that reflect your brand identity and engage your audience.</p>
+                    </div>
+                    <div class="service-card reveal reveal-d2">
+                        <div class="service-icon">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Web Development</h3>
+                        <p>Responsive, fast-loading websites built with clean code and best practices.</p>
+                    </div>
+                    <div class="service-card reveal reveal-d3">
+                        <div class="service-icon">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M20.59 13.41 11 3.83 3.83 11 13.41 20.59a2 2 0 0 0 2.82 0l4.36-4.36a2 2 0 0 0 0-2.82z">
+                                </path>
+                                <line x1="7.5" y1="7.5" x2="7.51" y2="7.5"></line>
+                            </svg>
+                        </div>
+                        <h3>Branding</h3>
+                        <p>Complete brand identity solutions including logos, color palettes, and guidelines.</p>
+                    </div>
+                    <div class="service-card reveal reveal-d4">
+                        <div class="service-icon">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z"></path>
+                            </svg>
+                        </div>
+                        <h3>UI/UX Design</h3>
+                        <p>User-centered design that improves engagement and conversion rates.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section" id="contact">
+            <div class="container reveal">
+                <h2>Ready to work together?</h2>
+                <p>Let's create something amazing</p>
+                <a href="contact.html" class="btn btn-primary btn-large">Get in Touch</a>
+            </div>
+        </section>
 
     </main>
 

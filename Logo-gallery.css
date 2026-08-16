@@ -11,8 +11,8 @@ html {
 }
 
 :root {
-    --accent: #f5a623;
-    --accent-light: #ffc857;
+    --accent: #f5f5f5;
+    --accent-light: #b8b8b8;
     --primary: #000000;
     --secondary: #ffffff;
     --text-light: #797979;
@@ -26,7 +26,7 @@ body {
     width: 100%;
     max-width: 100%;
     font-family: 'Inter', 'Roboto', sans-serif;
-    background-color: #0a0a0f;
+    background-color: #0a0a0a;
 }
 
 /* ================================
@@ -100,9 +100,9 @@ body {
     font-size: 13px;
     font-weight: 600;
     background: var(--accent);
-    color: white;
-    border: none;
-    border-radius: 8px;
+    color: #000000;
+    border: 1px solid var(--accent);
+    border-radius: 4px;
     padding: 9px 22px;
     cursor: pointer;
     text-decoration: none;
@@ -110,7 +110,8 @@ body {
 }
 
 .nav-cta:hover {
-    background: #e8940f;
+    background: transparent;
+    color: var(--accent);
 }
 
 /* Hamburger toggle — hidden on desktop */
@@ -155,7 +156,7 @@ body {
 .logo-gallery-section {
     width: 100%;
     padding: 80px 40px;
-    background-color: #0a0a0f;
+    background-color: #0a0a0a;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -180,13 +181,14 @@ body {
 }
 
 .logo-bg-toggle {
-    background: #18181f;
+    background: #141414;
     border: 1px solid rgba(255, 255, 255, 0.08);
     color: #fff;
+    font-family: 'Courier New', monospace;
     font-size: 13px;
     font-weight: 600;
     padding: 9px 20px;
-    border-radius: 999px;
+    border-radius: 2px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -198,23 +200,22 @@ body {
 
 .logo-grid {
     width: 100%;
-    max-width: 1100px;
+    max-width: 1200px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .logo-item {
-    border-radius: 12px;
-    overflow: hidden;
-    background: #18181f;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    background: #0a0a0a;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background 0.3s ease;
 }
 
 .logo-item:hover {
-    transform: translateY(-4px);
-    border-color: rgba(245, 166, 35, 0.35);
+    background: #111111;
 }
 
 /* Thumb wrapper handles the hover zoom + "View Large" overlay,
@@ -225,7 +226,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #0e0e12;
+    background: #0a0a0a;
     overflow: hidden;
     cursor: pointer;
     transition: background 0.3s ease;
@@ -264,17 +265,18 @@ body {
 
 .view-large {
     color: #fff;
+    font-family: 'Courier New', monospace;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 11px;
     padding: 8px 16px;
-    border: 2px solid #fff;
-    border-radius: 6px;
-    letter-spacing: 0.3px;
+    border: 1px solid #fff;
+    letter-spacing: 1px;
     white-space: nowrap;
+    text-transform: uppercase;
 }
 
 .logo-item figcaption {
-    padding: 14px 16px;
+    padding: 16px;
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -283,12 +285,12 @@ body {
 
 .logo-title {
     color: #fff;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
 }
 
 .logo-client {
-    color: #666;
+    color: var(--text-light);
     font-size: 12px;
 }
 
@@ -333,7 +335,7 @@ body {
    ================================ */
 
 .footer {
-    background: #05070f;
+    background: #050505;
     padding: 60px 20px 30px;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -450,7 +452,6 @@ body {
 
     .logo-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
     }
 
     .logo-gallery-section {

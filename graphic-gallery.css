@@ -11,8 +11,8 @@ html {
 }
 
 :root {
-    --accent: #f5a623;
-    --accent-light: #ffc857;
+    --accent: #f5f5f5;
+    --accent-light: #b8b8b8;
     --primary: #000000;
     --secondary: #ffffff;
     --text-light: #5c5c5c;
@@ -26,7 +26,7 @@ body {
     width: 100%;
     max-width: 100%;
     font-family: 'Inter', 'Roboto', sans-serif;
-    background-color: #0a0a0f;
+    background-color: #0a0a0a;
 }
 
 /* ================================
@@ -100,9 +100,9 @@ body {
     font-size: 13px;
     font-weight: 600;
     background: var(--accent);
-    color: white;
-    border: none;
-    border-radius: 8px;
+    color: #000000;
+    border: 1px solid var(--accent);
+    border-radius: 4px;
     padding: 9px 22px;
     cursor: pointer;
     text-decoration: none;
@@ -110,7 +110,8 @@ body {
 }
 
 .nav-cta:hover {
-    background: #e8940f;
+    background: transparent;
+    color: var(--accent);
 }
 
 /* Hamburger toggle — hidden on desktop */
@@ -155,7 +156,7 @@ body {
 .gallery-section {
     width: 100%;
     padding: 80px 40px;
-    background-color: #0a0a0f;
+    background-color: #0a0a0a;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -187,47 +188,47 @@ body {
 }
 
 .filter-btn {
-    background: #18181f;
+    background: #141414;
     border: 1px solid rgba(255, 255, 255, 0.08);
     color: #888;
+    font-family: 'Courier New', monospace;
     font-size: 13px;
     font-weight: 600;
     padding: 9px 20px;
-    border-radius: 999px;
+    border-radius: 2px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .filter-btn:hover {
     color: #fff;
-    border-color: rgba(245, 166, 35, 0.4);
+    border-color: rgba(255, 255, 255, 0.4);
 }
 
 .filter-btn.active {
     background: var(--accent);
     border-color: var(--accent);
-    color: #fff;
+    color: #000000;
 }
 
 .gallery-grid {
     width: 100%;
-    max-width: 1100px;
+    max-width: 1200px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .gallery-item {
-    border-radius: 12px;
-    overflow: hidden;
-    background: #18181f;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    background: #0a0a0a;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background 0.3s ease;
 }
 
 .gallery-item:hover {
-    transform: translateY(-4px);
-    border-color: rgba(245, 166, 35, 0.35);
+    background: #111111;
 }
 
 /* Image wrapper — this AND the rule directly below it are what force
@@ -243,20 +244,22 @@ body {
 .gallery-image img {
     width: 100%;
     height: 100%;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     display: block;
-    transition: transform 0.5s ease;
+    filter: grayscale(35%);
+    transition: transform 0.6s ease, filter 0.4s ease;
 }
 
 .gallery-item:hover .gallery-image img {
-    transform: scale(1.08);
+    transform: scale(1.05);
+    filter: grayscale(0%);
 }
 
 .gallery-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.65);
+    background: rgba(0, 0, 0, 0.55);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -270,20 +273,22 @@ body {
 
 .view-large {
     color: #fff;
+    font-family: 'Courier New', monospace;
     font-weight: 600;
-    font-size: 13px;
-    padding: 10px 22px;
-    border: 2px solid #fff;
-    border-radius: 6px;
-    letter-spacing: 0.3px;
+    font-size: 12px;
+    padding: 9px 20px;
+    border: 1px solid #fff;
+    letter-spacing: 1px;
     white-space: nowrap;
+    text-transform: uppercase;
 }
 
 .gallery-item figcaption {
-    padding: 14px 16px;
+    padding: 18px 20px;
     display: flex;
-    flex-direction: column;
-    gap: 4px;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8px;
 }
 
 .gallery-title {
@@ -293,8 +298,12 @@ body {
 }
 
 .gallery-tag {
-    color: #666;
-    font-size: 12px;
+    font-family: 'Courier New', monospace;
+    color: var(--text-light);
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
 }
 
 .gallery-item.hidden {
@@ -340,7 +349,7 @@ body {
    ================================ */
 
 .footer {
-    background: #05070f;
+    background: #050505;
     padding: 60px 20px 30px;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -451,7 +460,6 @@ body {
 
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
     }
 
     .gallery-section {
