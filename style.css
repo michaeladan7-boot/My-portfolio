@@ -541,7 +541,7 @@ body {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.45);
+    background: rgba(0, 0, 0, 0.15);
     mix-blend-mode: multiply;
     pointer-events: none;
     transition: var(--transition);
