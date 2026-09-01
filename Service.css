@@ -287,6 +287,7 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.box1:hover,
 .box2:hover,
 .box3:hover {
     box-shadow: 0 12px 32px rgba(255, 255, 255, 0.15);
